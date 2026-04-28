@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    
+    <title>Bún nước lèo</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../CSS/style6.css">
+</head>
+<body>
+    <script>
+    //1-Tạo thẻ div cho toàn bộ khung
+        const newDiv=document.createElement("div");
+        newDiv.setAttribute("class","product-item");
+    //2-Tạo thẻ dic gắn hình ảnh
+        const productImage=document.createElement("div");
+        productImage.setAttribute("class","product-image");
+    //3-Gắn hình ảnh vào
+        const productImageNode=document.createElement("img"); 
+        productImageNode.setAttribute("src","../assets/images/bunnuocleo.jpeg");
+        productImage.appendChild(productImageNode);
+    //4-Tạo thẻ div thông tin 
+       const productInfo=document.createElement("div");
+       productInfo.setAttribute("class","product-info");
+       //i-Tạo name
+       const productName=document.createElement("p");
+       const nameText=document.createTextNode("Bún nước lèo Trà Vinh");
+       productName.appendChild(nameText);
+       productInfo.appendChild(productName);
+       //ii-Tạo price
+       const productPrice=document.createElement("p");
+       const Pricetext=document.createTextNode("37.000vnđ");
+       productPrice.appendChild(Pricetext);
+       productInfo.appendChild(productPrice);
+       //iii- Tạo link
+       const productLink=document.createElement("a");
+       productLink.setAttribute("href","https://mia.vn/cam-nang-du-lich/mon-bun-nuoc-leo-tra-vinh-17783");
+       const Linktext=document.createTextNode("Nhấn vào đây để xem chi tiết");
+       productLink.appendChild(Linktext);
+       productInfo.appendChild(productLink);
+    //5-Gắn nó vào div tổng 
+        newDiv.appendChild(productImage);
+        newDiv.appendChild(productInfo);
+    //6-Gán body
+        document.body.appendChild(newDiv);
+    </script>
+</body>
+</html>
