@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Bài tập thêm sản phẩm</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../CSS/style7.css">
+</head>
+<body>
+
+    
+    <button onclick="addProduct('Sản phẩm')">Thêm sản phẩm</button>
+
+    <h3>list of products:</h3>
+    <div class="list-product" id="danh-sach">
+    </div>
+    <script>
+        let dem = 1; 
+        function addProduct(tenSanPham) {
+            const container = document.getElementById("danh-sach");
+            const newItem = document.createElement("div");
+            
+            newItem.className = "product-item";
+            
+            newItem.innerText = tenSanPham + " " + dem;
+            dem++; 
+
+            container.appendChild(newItem);
+        }
+    </script>
+</body>
+</html>
