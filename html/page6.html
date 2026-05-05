@@ -2,46 +2,27 @@
 <html lang="vi">
 <head>
     
-    <title>Bún nước lèo</title>
+    <title>Món Ăn Sáng Việt Nam</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../CSS/style6.css">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/lib.js"></script>
 </head>
 <body>
+    <div class="product-list row row-cols-1 row-cols-4 g-4" id="product-list">
+
+    </div>
+    
     <script>
-    //1-Tạo thẻ div cho toàn bộ khung
-        const newDiv=document.createElement("div");
-        newDiv.setAttribute("class","product-item");
-    //2-Tạo thẻ dic gắn hình ảnh
-        const productImage=document.createElement("div");
-        productImage.setAttribute("class","product-image");
-    //3-Gắn hình ảnh vào
-        const productImageNode=document.createElement("img"); 
-        productImageNode.setAttribute("src","../assets/images/bunnuocleo.jpeg");
-        productImage.appendChild(productImageNode);
-    //4-Tạo thẻ div thông tin 
-       const productInfo=document.createElement("div");
-       productInfo.setAttribute("class","product-info");
-       //i-Tạo name
-       const productName=document.createElement("p");
-       const nameText=document.createTextNode("Bún nước lèo Trà Vinh");
-       productName.appendChild(nameText);
-       productInfo.appendChild(productName);
-       //ii-Tạo price
-       const productPrice=document.createElement("p");
-       const Pricetext=document.createTextNode("37.000vnđ");
-       productPrice.appendChild(Pricetext);
-       productInfo.appendChild(productPrice);
-       //iii- Tạo link
-       const productLink=document.createElement("a");
-       productLink.setAttribute("href","https://mia.vn/cam-nang-du-lich/mon-bun-nuoc-leo-tra-vinh-17783");
-       const Linktext=document.createTextNode("Nhấn vào đây để xem chi tiết");
-       productLink.appendChild(Linktext);
-       productInfo.appendChild(productLink);
-    //5-Gắn nó vào div tổng 
-        newDiv.appendChild(productImage);
-        newDiv.appendChild(productInfo);
-    //6-Gán body
-        document.body.appendChild(newDiv);
+        productList.forEach(function(item)
+        { 
+            //truyền thuộc tính vào hàm
+            addProduct(item.id, item.name, item.price, item.image, item.productLink);
+
+        });
+   
     </script>
 </body>
 </html>
